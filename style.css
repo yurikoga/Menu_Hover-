@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.bg-container {
+    background-color: #2196F3; /* Azul do fundo */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container {
+    background-color: white;
+    padding: 15px 40px;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 45px; /* Espaçamento entre os itens */
+}
+
+.nav-item {
+    position: relative;
+    padding: 10px 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+/* A linha azul (indicador) */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #2196F3;
+    transition: width 0.3s ease;
+}
+
+/* Estado ativo (como o 'Contact' na sua imagem) */
+.nav-item.active::after {
+    width: 100%;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
